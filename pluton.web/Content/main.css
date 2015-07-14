@@ -1,0 +1,218 @@
+﻿*{ margin:0; padding:0; }
+
+body{
+  margin: auto;
+	font: 12px Tahoma,Verdana, Arial,sans-serif;
+	line-height: 18px;
+	text-align:left;
+	color:#515b67;
+	background: #F6F6F6;
+}
+
+.clear {
+    clear:both;
+}
+
+/*** Login page ***/
+.login {
+    margin:0 auto;
+    margin-bottom:60px;
+    width:400px;
+}
+.login #logologin {
+    margin: 20px auto;
+    width: 400px;
+    height: 130px;
+    background: url(img/logologin.png) no-repeat center center;
+}
+.login #loginpanel {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 20px 40px;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    box-shadow: 0px 4px 10px -1px #ebebeb;
+}
+.login button[type='submit'] {
+    float:right;
+    width: 100px;
+    color: #fff;
+    background: #e24e0d;
+    border: 1px solid #d6490c;
+    border-radius: 3px;
+}
+.login a, .login a:visited {
+    color: #5e6a78;
+    text-decoration: none;
+}
+.login a:hover {color: #e24e0d;}
+
+/*** Layout header ***/
+#header {
+    min-width: 1260px;
+    width: 100%;
+    height: 64px;
+    background: url("img/bgheader.png") repeat-x;
+}
+#topwrapper {
+    margin: 0 auto;
+    width: 1240px;
+    height: 60px;
+}
+#logowrapper {
+    margin: auto;
+    width: 180px;
+    height: 44px;
+    padding: 12px 0px 4px 0px;
+    float: left;
+}
+#header .logo {
+    width: 131px;
+    height: 44px;
+    background: url(img/logo.png) no-repeat 50% 50%;
+    float: left;
+}
+#mobnav {
+    width: 25px;
+    height: 30px;
+    background: url(img/mobnav.png) no-repeat 50% 50%;
+    float: right;
+}
+.logout {
+    width: 29px;
+    height: 29px;
+    float:right;
+    background:url(img/logout.png);
+    margin-top:14px;
+}
+
+/*** Layout footer ***/
+.spacer { 
+    margin:0 auto;
+    margin-top:21px;
+    width: 1240px; 
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #dadada;
+}
+#footer{ 
+    clear:both; 
+    width:1240px; 
+    height: 200px; 
+    padding:5px 0; 
+    margin:0 auto; 
+    font-size: 11px; 
+    color:#515b67;
+}
+#footer p{
+    margin:0 0 0 20px; 
+    width: 400px; 
+    text-align:left;
+    line-height: 30px;
+    float:left;
+}
+#footer p a, #footer p a:hover, #footer p a:visited {
+    color: #5E6A78;
+    text-decoration: none;
+    font-weight:bold;
+} 
+.logoapp {
+    margin: auto 20px;
+    width: 90px;
+    height: 30px;
+    background: url(img/logoapp.png) no-repeat 0 4px;
+    float: right;
+}
+#footer .copyright {
+    float:right;
+    padding-right:15px;
+}
+#footer .copyright a {
+    font-weight:bold;
+    text-decoration: none;
+}
+
+#content {
+    margin: 20px auto;
+    overflow: hidden;
+    width: 1240px;
+}
+
+#pm_task {
+    margin: auto;
+    width: 240px;
+    height: 60px;
+    background: url(img/pm_line.png) repeat-x center bottom;
+    text-align: center;
+}
+
+#pm_task input {
+    margin: auto;
+    width: 138px;
+    height: 36px;
+    color: #ffffff;
+    text-align: right;
+    background: url(img/task_ico.png) no-repeat 10px center #e24e0d;
+    border: 0px;
+    border-radius: 2px;
+    padding: 0px 14px;
+    font-size: 13px;
+}
+
+
+.tmanager_tb1 {
+    margin: auto;
+    width: 310px;
+    height: 50px;
+    float: left;
+}
+
+.tmanager_tb2 {
+    margin: auto auto auto 30px;
+    width: 400px;
+    height: 50px;
+    position: relative;
+    float: left;
+}
+
+    .tmanager_tb2 label {
+        position: absolute;
+        top: 10px;
+        right: 160px;
+    }
+
+    .tmanager_tb2 .button {
+        margin: 4px auto;
+        background: url("../img/toolbar_btn.png") repeat-x scroll 0 0 #F1F1F1;
+        border: 1px solid #D8D8D8;
+        border-radius: 2px;
+        color: #676767;
+        font-size: 11px;
+        height: 26px;
+        padding: 0 8px;
+    }
+
+.tm_p1 {
+    margin: 8px 20px auto auto !important;
+    color: #838992;
+    font-family: 'Open Sans',Tahoma,Arial,Verdana,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 10px;
+    float: left;
+}
+
+.tm_p2 {
+    margin: 8px auto auto !important;
+    color: #838992;
+    font-family: 'Open Sans',Tahoma,Arial,Verdana,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 10px;
+    float: right;
+}
+
+.tmanager_tb1 div {
+    float: left !important;
+}
+

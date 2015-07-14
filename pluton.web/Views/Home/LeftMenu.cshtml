@@ -1,0 +1,15 @@
+﻿@model List<pluton.dal.SideMenuModel>
+<nav id="menu-left" style="display:none;">
+    <ul>
+        <div id="pm_task">
+            <input type="submit" onclick="javascript: window.open('taskView.aspx')" value="Nowe zadanie"/>
+        </div> 
+        @foreach (var item in Model) { 
+            <li class="@item.IconLink"><a href="@item.Url">@item.Label</a></li>
+        }
+    <!--
+        <div class="clear"></div>
+        <div id="orgFilter" style="float:left; "></div>
+    -->
+    </ul>
+</nav>

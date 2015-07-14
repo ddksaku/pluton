@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57975DB0-C855-4467-B86D-0750B66F6F10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pluton.dal</RootNamespace>
+    <AssemblyName>pluton.dal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\AccessLogItem.cs" />
+    <Compile Include="Entities\BreakdownReason.cs" />
+    <Compile Include="Entities\BrokenElement.cs" />
+    <Compile Include="Entities\CertificateSkill.cs" />
+    <Compile Include="Entities\CertificateType.cs" />
+    <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\Image.cs" />
+    <Compile Include="Entities\LocalizationResource.cs" />
+    <Compile Include="Entities\MobileDataSubmission.cs" />
+    <Compile Include="Entities\MobileStatusCheck.cs" />
+    <Compile Include="Entities\OrgUnit.cs" />
+    <Compile Include="Entities\OrgUnitType.cs" />
+    <Compile Include="Entities\Personel.cs" />
+    <Compile Include="Entities\PersonelSkillCertification.cs" />
+    <Compile Include="Entities\Region.cs" />
+    <Compile Include="Entities\Shift.cs" />
+    <Compile Include="Entities\ShiftAssignment.cs" />
+    <Compile Include="Entities\SpecialEquipment.cs" />
+    <Compile Include="Entities\Task.cs" />
+    <Compile Include="Entities\TaskPersonAssignment.cs" />
+    <Compile Include="Entities\TaskSort.cs" />
+    <Compile Include="Entities\TaskSortType.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserOrgSelection.cs" />
+    <Compile Include="Entities\UserPasswordRequest.cs" />
+    <Compile Include="Entities\UserRequest.cs" />
+    <Compile Include="Entities\UserRole.cs" />
+    <Compile Include="Entities\Vehicle.cs" />
+    <Compile Include="Entities\VehicleType.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="IdentityGenerator.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IQueryTranslater.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\IRepositoryQuery.cs" />
+    <Compile Include="Repository\IRepositoryQueryOrdered.cs" />
+    <Compile Include="Repository\QueryTranslater.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\RepositoryQuery.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

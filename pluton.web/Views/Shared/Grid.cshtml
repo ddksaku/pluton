@@ -1,0 +1,19 @@
+﻿@using pluton.web.Helpers;
+@model pluton.web.Models.Common.Grid.ListModel
+
+@{
+    Layout = null;
+    var controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+    GridOptions opts = (ViewBag.GridOptions as GridOptions) ?? new GridOptions();
+}
+
+@if (!string.IsNullOrEmpty(Model.Filter.PropertyFilter.PropertyName))
+{
+    @Html.Partial("PropertyFilter", Model.Filter.PropertyFilter)
+}
+@Html.Partial("Paging", Model)
+@Html.Table(Model, controllerName, opts)
+@if (!string.IsNullOrEmpty(Model.Filter.AlphaFilter.AlphaPropName))
+{
+    @Html.Partial("AlphaFilter", Model.Filter.AlphaFilter)
+}

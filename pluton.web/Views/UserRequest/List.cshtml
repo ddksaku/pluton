@@ -1,0 +1,18 @@
+﻿@using pluton.web.Helpers
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles
+{
+    <link rel="stylesheet" href="@Url.Content("~/Content/Grid.css")" />
+}
+<div class="container-fluid">
+    @Html.Grid("UserRequest")
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/grid")
+}

@@ -1,0 +1,24 @@
+﻿@model pluton.web.Models.Common.Grid.AlphabeticFilter
+@{
+    var controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+    char[] alphaList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+}
+
+<div id="toolbarfixed">
+    <div class="wrapper">
+        <div class="tmanager_tb1">
+
+            <input type="hidden" value="@Model.BeginFrom" class="currentLetter" />
+            @*                <input type="hidden" value="@Model.AlphaFilter.AlphaPropName" class="currenProp" />*@
+            <p class="tm_p1">[%Фильтруй%]:</p>
+            <a class="filterButton" data-val="all" href="@Url.Action("Grid", controllerName)">[%Все%]</a>
+            @foreach (var letter in alphaList)
+            {
+                <a class="filterButton" data-val="@letter" href="@Url.Action("Grid", controllerName, new { Model.AlphaPropName, BeginFrom = letter })">@letter</a>
+            }
+        </div>
+    </div>
+</div>
+
+
+

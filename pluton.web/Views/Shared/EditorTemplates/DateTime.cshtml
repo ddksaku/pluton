@@ -1,0 +1,8 @@
+﻿@model DateTime?
+@{
+    var txtId = "txt" + ViewData.ModelMetadata.PropertyName;
+}
+
+<div>
+    <input type="text" data-type="datetime"  id="@txtId" name="@ViewData.TemplateInfo.GetFullHtmlFieldName(string.Empty)" value="@ViewData.TemplateInfo.FormattedModelValue" required="@ViewData.ModelMetadata.IsRequired" />
+</div>

@@ -1,0 +1,213 @@
+/* CSS Document */
+
+
+#toolbarfixed {
+    background: none repeat scroll 0 0 #394758;
+    border-top: 1px solid #252F3D;
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    width: 1240px;
+    border-radius: 3px 3px 0 0;
+}
+
+
+#toolbarfixed .wrapper {
+    height: 100%;
+    margin: auto;
+    width: 1220px;
+}
+
+
+#toolbarfixed .tmanager_tb1 {
+    float: left;
+    height: 50px;
+    margin: auto;
+    width: 600px !important;
+}
+
+#toolbarfixed {color: #FFFFFF;}
+
+#toolbarfixed .button {
+    background: none repeat scroll 0 0 #4C5B6F;
+    border: 1px solid #57687F;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size: 11px;
+    height: 30px;
+    padding: 4px 8px;
+}
+
+#toolbarfixed .button:hover {background: none repeat scroll 0 0 #E24E0D;
+    border: 1px solid #CE470C;}
+    
+#toolbarfixed .tm_p1 {margin: auto !important;
+padding: 0px 20px 0px 0px;
+color: #FFFFFF;} 
+
+.selectedFilterButton {background: none repeat scroll 0 0 #E24E0D !important;
+    border: 1px solid #CE470C !important;} 
+    
+#toolbarfixed a, #toolbarfixed a:hover, #toolbarfixed a:visited {color: #FFFFFF;}
+
+.pagenav, .pagenav table td {color: #5E6A78 !important;
+border: 0px !important;}
+
+.pagenav a, .pagenav a:hover, .pagenav a:visited {color: #E24E0D;} 
+
+/** Kalendarz **/
+
+.maincalendar {margin: auto;
+width: 329px;
+height: 100%;
+float: left;}  
+
+.mc_prev {margin: auto;
+width: 30px;
+height: 30px;
+color: #e24e0d;
+float: left;}
+
+.mc_next {margin: auto;
+width: 30px;
+height: 30px;
+color: #e24e0d;
+float: right;} 
+
+.mc_table .mc_month {color: #5e6a78;
+font-weight: bold;
+text-align: center !important;
+border: 0px;} 
+
+.mc_table th, .mc_table td {width: 38px !important;
+height: 38px !important;
+padding: 4px !important;}
+
+.mc_table td {border: 1px solid #dedede;
+text-align: right !important;}
+
+.mc_table .holiday {color: #ce3a00;
+font-weight: bold;}
+
+.mc_table .work {background: #f2f3f4;}
+
+.mc_table td:hover {color: #FFFFFF;
+background: #394758;}
+
+.tablebox {margin: auto;
+width: 860px;
+height: auto;
+float: right;}
+
+
+.box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 1px #F1F1F1;
+    height: 100%;
+    margin: 10px auto;
+    overflow: hidden;
+    padding: 8px;
+    width: 98%;
+}
+
+.mcenter {text-align: center !important;}
+
+.maincalendar select {width: 328px !important;
+    height: 120px !important;
+    background: #394758;
+    border: 1px solid #2f3c4d !important;
+    border-radius: 3px !important;
+    color: #b4c9e2 !important;
+    padding: 4px 2px !important;}
+    
+    
+.tablebox .button2 {
+    background: none repeat scroll 0 0 #E24E0D;
+    border: 1px solid #CE470C;
+    border-radius: 2px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 11px;
+    height: 30px;
+    margin: 6px auto auto;
+    padding: 4px 8px;
+}  
+
+
+
+.pager td {border: 0px !important;} 
+
+.box .dataForm td {border: 0px;}
+
+.box .dataForm th {border: 0px !important;}
+
+#page select {
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    color: #5E6A78;
+    height: 28px;
+    padding: 4px 2px;
+}
+
+#page select option {color: #b4c9e2 !important;
+background: #394758;}
+
+#page hr {margin: 10px auto;
+width: 100%;
+height: 1px;
+background: #E5E5E5;
+border: 0px;} 
+
+#ms_bulk a, #ms_bulk a:hover, #ms_bulk a:visited {color: #5E6A78;
+font-weight: bold;}
+
+#ms_bulk div {height: 34px;
+line-height: 34px;
+border-bottom: 1px solid #ECECEC;}
+
+#ms_bulk div div, #ms_bulk div div div {border: 0px;}
+
+#ms_bulk div:hover {background: #394758;
+border-bottom: 1px solid #2f3c4d;}
+
+#ms_bulk div:hover a {color: #FFFFFF;}
+
+.msb td, .msb th {border: 1px solid #DDDDDD;}
+
+.msb .button {background: #e24e0d;
+    border: 1px solid #ce3a00;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 4px 8px;}
+    
+#mm-m0-p0 {height: auto;
+padding-bottom: 20px;}    
+    
+#mm-m0-p1 {margin: auto;
+width: 230px;
+height: auto;
+max-height: 380px;
+top: 410px;
+left: 0px;
+border: 0px;
+box-shadow: none;
+color: rgba(255, 255, 255, 0.6);
+} 
+
+#mm-m0-p1 .separator {width: 100%;
+height: 2px;
+background: url("../img/pm_line.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
+padding: 0px !important;
+border: 0px;} 
+
+#mm-m0-p1 h2 {padding: 0px !important;}  
+
+#mm-m0-p1 div {padding: 2px 0px !important;
+border: 0px !important;}

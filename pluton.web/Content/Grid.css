@@ -1,0 +1,98 @@
+﻿.tableContainer {
+    background-color: white;
+    padding: 20px;
+}
+
+.tableContainer table tr:hover {
+    cursor: pointer;
+}
+
+ul.pager {
+    margin: 5px 0px;
+}
+
+    ul.pager li {
+        float: right;
+    }
+
+        ul.pager li a {
+            border: none;
+            background-color: transparent !important;
+            text-decoration: none;
+        }
+
+        ul.pager li label {
+            padding: 5px 14px;
+        }
+
+.sort-anchor {
+    cursor: pointer;
+}
+
+    .sort-anchor:hover, ul.pager li a:hover {
+        color: #e24e0d;
+    }
+
+
+#toolbarfixed {
+    background: none repeat scroll 0 0 #394758;
+    border-top: 1px solid #252F3D;
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    width: 1240px;
+    border-radius: 3px 3px 0 0;
+}
+
+
+    #toolbarfixed .wrapper {
+        height: 100%;
+        margin: auto;
+        width: 1220px;
+    }
+
+
+    #toolbarfixed .tmanager_tb1 {
+        float: left;
+        height: 50px;
+        margin: auto;
+        width: 600px !important;
+    }
+
+#toolbarfixed {
+    color: #FFFFFF;
+}
+
+    #toolbarfixed .button {
+        background: none repeat scroll 0 0 #4C5B6F;
+        border: 1px solid #57687F;
+        border-radius: 2px;
+        color: #FFFFFF;
+        font-size: 11px;
+        height: 30px;
+        padding: 4px 8px;
+    }
+
+        #toolbarfixed .button:hover {
+            background: none repeat scroll 0 0 #E24E0D;
+            border: 1px solid #CE470C;
+        }
+
+    #toolbarfixed .tm_p1 {
+        margin: auto !important;
+        padding: 0px 20px 0px 0px;
+        color: #FFFFFF;
+    }
+
+.selectedFilterButton {
+    background: none repeat scroll 0 0 #E24E0D !important;
+    border: 1px solid #CE470C !important;
+}
+
+#toolbarfixed a, #toolbarfixed a:hover, #toolbarfixed a:visited {
+    color: #FFFFFF;
+}

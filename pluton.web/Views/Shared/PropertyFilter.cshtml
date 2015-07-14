@@ -1,0 +1,18 @@
+﻿@model pluton.web.Models.Common.Grid.PropertyFilter
+
+@{
+    var lookupItems = ViewBag.PropertyValue;
+}
+<div class="pull-left">
+    <label for="ddlPropertyFilter" class="col-sm-3 control-label">[%Filter%]:</label>
+    <div class="col-sm-7">
+        @Html.HiddenFor(x => x.PropertyName)
+        @Html.EditorFor(x => x.PropertyValue,
+                        new
+                        {
+                            HtmlAttributes = new Dictionary<string, object> { { "class", "form-control propertySelector" }, { "id", "ddlPropertyFilter" },
+                        {"data-url",Url.Action("Grid", new  { Model.PropertyName, PropertyValue = "_val_" })} },
+                            lookupItems
+                        })
+    </div>
+</div>

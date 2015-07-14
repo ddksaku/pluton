@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+<<<<<<< HEAD
+using pluton.dal;
+=======
+using pluton.web.Models;
+using pluton.web.Models.Common;
+>>>>>>> origin/grid_solution
+
+namespace pluton.web.Controllers
+{
+    public class HomeController : Controller, IGridController
+    {
+        private IMenuRepository menuRepository;
+
+        public HomeController()
+        {
+            menuRepository = new MenuRepository(new PlutonDataContext());
+        }
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public PartialViewResult LeftMenu()
+        {
+
+            int userId = 0;
+            int.TryParse(System.Web.HttpContext.Current.User.Identity.Name, out userId);
+            // TODO: Multilanguage
+            var items = menuRepository.SideMenu("PL", userId);
+            return PartialView(items);
+        }
+        /*
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your app description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+<<<<<<< HEAD
+         * */
+=======
+
+        //NOTE: Just test purposes!
+        [HttpGet]
+        [AllowAnonymous]
+        public ActionResult Grid(PagingModel paging)
+        {
+            IList<TestModel> list = new List<TestModel>();
+            for (int i = 0; i < 15; i++)
+            {
+                list.Add(new TestModel() { Description = paging.Page.ToString() + "sd" + i.ToString(), Id = i, Name = paging.Page.ToString() + "sad" + i.ToString() });
+            }
+            paging.Total = list.Count();
+            ViewBag.Paging = paging;
+            return
+                View(new ListModel(paging, list.Skip((paging.Page - 1) * paging.ItemsPerPage).Take(paging.ItemsPerPage)));
+        }
+>>>>>>> origin/grid_solution
+    }
+}

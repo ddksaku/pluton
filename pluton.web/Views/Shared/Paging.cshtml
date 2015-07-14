@@ -1,0 +1,19 @@
+﻿@model pluton.web.Models.Common.Grid.ListModel
+
+@{
+    var controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+}
+
+<ul class="pager">
+    <li class="next @(Model.Paging.Page * Model.Paging.ItemsPerPage >= Model.Paging.Total ? "disabled" : string.Empty)">
+        <a href="@Url.Action("Grid", controllerName,
+        new { page = Model.Paging.Page + 1, Model.Sort.SortBy, Model.Sort.Asc, Model.Filter.AlphaFilter.AlphaPropName, Model.Filter.AlphaFilter.BeginFrom, Model.Filter.PropertyFilter.PropertyName, Model.Filter.PropertyFilter.PropertyValue })">&gt;&gt;&gt;&nbsp;</a>
+    </li>
+    <li>
+        <label>@Model.Paging.Page &nbsp;of&nbsp;@Math.Round(((decimal)Model.Paging.Total / (decimal)Model.Paging.ItemsPerPage), 0, MidpointRounding.AwayFromZero)</label></li>
+    <li class="previous @(Model.Paging.Page == 1 ? "disabled" : string.Empty)">
+        <a href="@Url.Action("Grid", controllerName,
+        new { page = Model.Paging.Page - 1, Model.Sort.SortBy, Model.Filter.AlphaFilter.AlphaPropName, Model.Filter.AlphaFilter.BeginFrom, Model.Filter.PropertyFilter.PropertyName, Model.Filter.PropertyFilter.PropertyValue  })" >&lt;&lt;&lt;&nbsp;</a>
+    </li>
+</ul>
+

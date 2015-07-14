@@ -1,0 +1,8 @@
+/pluton.web/obj
+/pluton.web/bin
+/pluton.web/pluton.web.csproj.user
+/pluton.dal/obj
+/pluton.dal/bin
+/packages
+/pluton.web/Web.config
+*.suo

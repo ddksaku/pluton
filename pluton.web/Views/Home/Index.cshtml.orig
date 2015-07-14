@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+﻿@{
+    ViewBag.Title = "Pluton";
+}
+
+1234
+=======
+﻿@using pluton.web.Helpers
+@using pluton.web.Models.Common
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@Html.Grid("Home", new PagingModel() { Page = 1 })
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/grid")
+}
+>>>>>>> origin/grid_solution

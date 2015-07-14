@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/pge")
+    @Styles.Render("~/Content/themes/base/css")
+    @RenderSection("styles", required: false)
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body id="bg">
+    @Html.Partial("_MenuLeft")
+    <div id="page" class="mm-page">
+        <div id="header">
+
+            <div id="topwrapper">
+                <div id="logowrapper">
+                    <a href="/">
+                        <div id="logo"></div>
+                    </a>
+                    <a href="#menu-left">
+                        <div id="mobnav"></div>
+                    </a>
+                </div>
+
+                <div id="generalnav">
+                    <ul id="usernav">
+                        <li class="usernav_info"><a href="/app/userProfile.aspx">Welcome, Lucas</a><ul class="sub">
+                            <div class="subdeco"></div>
+                            <li><a onclick="PositionAjaxPopup(roleSelector, this.id, -145, 0);" href="javascript:__doPostBack('ctl00$btnShowRoleSelector','');" id="mnuMainroleChanger">Select role</a></li>
+                        </ul>
+                        </li>
+                        <li class="logout">
+                            <input type="submit" onclick="javascript: __doPostBack('ctl00$mnuMain', '')" id="mnuMainLogout" value=""></li>
+                    </ul>
+                    <ul id="nav" class="gennav">
+                        <li class="top"><a href="/app/default.aspx" id="1">Homepage</a></li>
+                        <li class="top"><a href="javascript:void(0);" id="20">Planning</a><ul class="sub">
+                            <div class="subdeco"></div>
+                            <li><a href="/app/TaskView.aspx">Add new task</a></li>
+                            <li><a href="/app/multitaskview.aspx">New tasks in bulk</a></li>
+                            <li><a href="/app/selectEmployee.aspx?allowDeletion=true">Delete unfilled tasks</a></li>
+                            <li><a href="/app/KPIexApprovalForm.aspx">Approve KPI exclusion</a></li>
+                        </ul>
+                        </li>
+                        <li class="top"><a href="javascript:void(0);" id="53">Assignment</a><ul class="sub">
+                            <div class="subdeco"></div>
+                            <li><a href="/app/openTaskGrid.aspx">Current tasks</a></li>
+                            <li><a href="/app/openTaskGrid.aspx?openTasks=true">Pending tasks</a></li>
+                            <li><a href="/app/operatorPosition.aspx">Team position summary</a></li>
+                            <li><a href="/app/selectEmployee.aspx">Personel timeline</a></li>
+                        </ul>
+                        </li>
+                        <li class="top"><a href="javascript:void(0);" id="21">Reporting</a><ul class="sub">
+                            <div class="subdeco"></div>
+                            <li><a href="/app/productivityReports.aspx">Labor efficiency</a></li>
+                            <li><a href="/app/productivityByEmployee.aspx">Personel labor efficiency</a></li>
+                            <li><a href="/app/taskTransitStatistics.aspx">Task summary</a></li>
+                            <li><a href="/app/productivityByStation.aspx">Station productivity</a></li>
+                            <li><a href="/app/taskSummaryBySort.aspx">Completed tasks</a></li>
+                            <li><a href="/app/coordinatorstats.aspx">Dispatcher work efficiency</a></li>
+                            <li><a href="/app/downloaddata.aspx">Task data export</a></li>
+                        </ul>
+                        </li>
+                        <li class="top"><a href="javascript:void(0);" id="11">Schedule management</a><ul class="sub">
+                            <div class="subdeco"></div>
+                            <li><a href="/app/shiftAllocation.aspx">Specialists - daily schedule</a></li>
+                            <li><a href="/app/manageShiftsBulk.aspx">Specialists - weekly schedule</a></li>
+                            <li><a href="/app/managePersonell.aspx">Staff management</a></li>
+                            <li><a href="/app/userShiftAssignment.aspx">Dispatchers - daily schedule</a></li>
+                            <li><a href="/app/vehiclesEdit.aspx">Fleet mgmt</a></li>
+                        </ul>
+                        </li>
+                        <li class="top"><a href="javascript:void(0);" id="2">Settings</a><ul class="sub">
+                            <div class="subdeco"></div>
+                            <li><a class="fly" href="/app/users/default.aspx">Users</a><ul>
+                                <li><a href="/app/users/user_requests.aspx">User Requests</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="/app/users/sessions.aspx">Access Log</a></li>
+                            <li><a class="fly" href="javascript:void(0);">System objects</a><ul>
+                                <li><a href="/app/manageOrganizations.aspx">Org units</a></li>
+                                <li><a href="/app/tasksSortsEdit.aspx">Task types</a></li>
+                                <li><a href="/app/breakdownReasonsEdit.aspx">Breakdown reasons</a></li>
+                                <li><a href="/app/brokenElementsEdit.aspx">Broken elements</a></li>
+                                <li><a href="/app/editSpecialEquipment.aspx">Special equipment</a></li>
+                                <li><a href="/app/lineTypesEdit.aspx">LV line types</a></li>
+                                <li><a href="/app/manageLanguage.aspx">Languages</a></li>
+                                <li><a href="/app/shiftsEdit.aspx">Shifts</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="display: none;">
+            </div>
+        </div>
+        <div id="content">
+            @RenderBody()
+
+        </div>
+
+
+
+        <div style="clear: both;"></div>
+        <div style="padding-top: 20px;">&nbsp;</div>
+        <div class="spacer"></div>
+        <div id="footer">
+            <p>
+
+                <a href="mailto:malgorzata_komosa@ggm.com">CONTACT SYSTEM ADMINISTRATOR</a> |
+        <a href="/app/userProfile.aspx">Manage my profile</a>
+            </p>
+            <div class="logoapp"></div>
+
+            <div class="languageselect" style="display: none;">
+                Change language:
+                <select name="ctl00$dpdLanguages" id="ctl00_dpdLanguages">
+                    <option value="PL">Polski</option>
+                    <option value="RU">Русский</option>
+                    <option value="UA">Українська</option>
+                    <option selected="selected" value="EN">English (US)</option>
+
+                </select>
+            </div>
+            <div style="clear: both;"></div>
+            <div style="float: right; padding-right: 15px;">Copyright © 2013. All rights reserved. <a href="">_terms_and_conditions</a></div>
+        </div>
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    <script type="text/javascript" src="~/Scripts/Common/pluton.datetime.js"></script>
+    <script type="text/javascript">
+        $.pluton.datetime.init({ calendarimg: '@Url.Content("~/Content/img/calendar.png")' });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@model pluton.web.Models.UserEntryModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-block">
+                <form class="form-horizontal" role="form" action="@Url.Action("Index")" method="POST">
+                    @Html.HiddenFor(x => x.Id)
+                    <div class="form-group">
+                        <label for="txtUserName" class="col-sm-3 control-label">[%User name%]:</label>
+                        <div class="col-sm-7">
+                            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeholder = "[%User name%]", id = "txtUserName" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtFirstName" class="col-sm-3 control-label">[%First name%]:</label>
+                        <div class="col-sm-7">
+                            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control", placeholder = "[%First name%]", id = "txtFirstName" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtLastName" class="col-sm-3 control-label">[%First name%]:</label>
+                        <div class="col-sm-7">
+                            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control", placeholder = "[%First name%]", id = "txtLastName" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail" class="col-sm-3 control-label">[%Email%]:</label>
+                        <div class="col-sm-7">
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "[%Email%]", id = "txtEmail" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPhone" class="col-sm-3 control-label">[%Phone%]:</label>
+                        <div class="col-sm-7">
+                            @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", placeholder = "[%Phone%]", id = "txtPhone" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword" class="col-sm-3 control-label">[%Password%]:</label>
+                        <div class="col-sm-5">
+                            @Html.TextBoxFor(x => x.NewPassword, new { @class = "form-control", placeholder = "[%New password%]", id = "txtPassword" })
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-default">[%Create%]</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ddlRole" class="col-sm-3 control-label">[%Default role%]:</label>
+                        <div class="col-sm-7">
+                            @Html.EditorFor(x => x.DefaultRoleId,
+                                            new { HtmlAttributes = new Dictionary<string, object> { { "class", "form-control" }, { "id", "ddlRole" } }, LookupItems = Model.AllRoles })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3 control-label">
+                            @Html.CheckBoxFor(x => x.IsActive)
+                            <label>[%Is active%]</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-default @(Model.IsActive ? "disabled" : string.Empty)">[%Unblock%]</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">[%Save%]</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-block">
+                JJJJ
+            </div>
+        </div>
+    </div>
+</div>

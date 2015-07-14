@@ -1,0 +1,28 @@
+﻿@model object
+@{
+    var selectList = (IEnumerable<SelectListItem>)ViewData["LookupItems"];
+
+    var htmlAttributes = (IDictionary<string, object>)ViewData["HtmlAttributes"] ?? new Dictionary<string, object>();
+
+
+    if (ViewData.ModelMetadata.IsRequired)
+    {
+        htmlAttributes.Add("required", true);
+    }
+    foreach (var selectListItem in selectList)
+    {
+
+        if ((Model == null && selectListItem.Value == "") || selectListItem.Value == Model.ToString())
+        {
+            selectListItem.Selected = true;
+        }
+        if (Model == null)
+        {
+            break;
+        }
+    }
+}
+
+@Html.DropDownList(string.Empty, selectList, htmlAttributes)
+
+
